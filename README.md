@@ -4,6 +4,9 @@ This command line tool takes inputs, creates them into a todolist and makes a wa
 
 ## TODO
 
-- [ ] Figure out a language
-- [ ] Write code to take the string input
-- [ ] Figure out what tool we can use to create these images
+- [x] Figure out a language
+- [x] Write code to take the string input
+- [x] ~~Figure out what tool we can use to create these images~~ [`imagemagick`](https://stackoverflow.com/questions/23236898/add-text-on-image-at-specific-point-using-imagemagick)
+- [ ] Write code for flags
+- [ ] Decide theming for the wallpaper
+- [ ] Create a base image
