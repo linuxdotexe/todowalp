@@ -16,8 +16,7 @@ def read_tasks():
   print(rows)
 
 # Function to store insert data into the DB
-def insert_tasks():
-  task_name = input("Enter task name: ")
+def insert_tasks(task_name):
   try:
     cursor.execute("INSERT INTO todo(task_name, status) VALUES(?, ?)", (task_name, 0,))
   except sqlite3.IntegrityError:
@@ -25,8 +24,7 @@ def insert_tasks():
   connection.commit()
 
 # Function to delete a task
-def delete_task():
-  task_name = input("Enter the task name that is to be deleted: ")
+def delete_task(task_name):
   cursor.execute("DELETE FROM todo WHERE task_name IS ?", (task_name,))
   connection.commit()
 
@@ -50,3 +48,7 @@ def update_tasks():
     
   else:
     print("Enter a valid option.")
+
+def help():
+  print(""" TODO: WRITE A HELP MESSAGE
+  """)
