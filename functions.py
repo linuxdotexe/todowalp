@@ -50,5 +50,21 @@ def update_tasks():
     print("Enter a valid option.")
 
 def help():
-  print(""" TODO: WRITE A HELP MESSAGE
+  print("""Usage: todowalp [options [parameters]]
+
+  Options:
+      -h (or) --help (or) h, Print this menu
+      Example: todowalp -h
+      
+      -i (or) --insert (or) i, Insert a task into the table
+      Example: todowalp -i taskname
+      
+      -d (or) --delete (or) d, Delete a task from the table
+      Example: todowalp -d taskname
+
+      -u (or) --update (or) u, Update a task from the table
+      Example: todowalp -u
+
+      To get all the tasks in the table, 
+      enter the command with no parameters.
   """)

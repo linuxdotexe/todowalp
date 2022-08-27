@@ -29,6 +29,7 @@ if len(sys.argv) > 1:
       insert_tasks(sys.argv[2])
     except IndexError:
       print("Not enough arguments. Enter the name of the task.")
+      print("Try the -h flag for the help menu.")
 
   # Define flag for delete_task
   elif sys.argv[1] == "-d" or sys.argv[1] == "d" or sys.argv[1] == "--delete":
@@ -36,6 +37,7 @@ if len(sys.argv) > 1:
       delete_task(sys.argv[2])
     except IndexError:
       print("Not enough arguments. Enter the name of the task.")
+      print("Try the -h flag for the help menu.")
 
   # Define flag for update_tasks
   elif sys.argv[1] == "-u" or sys.argv[1] == "u" or sys.argv[1] == "--update":
