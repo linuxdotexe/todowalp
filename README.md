@@ -10,5 +10,5 @@ This command line tool takes inputs, creates them into a todolist and makes a wa
 - [x] Write code for flags
 - [x] Write a help message
 - [x] Make any wrong command return the help message
-- [ ] Decide theming for the wallpaper
-- [ ] Create a base image
+- [x] Decide theming for the wallpaper
+- [x] Create a base image
