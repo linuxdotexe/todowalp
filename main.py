@@ -8,7 +8,8 @@ import sqlite3
 import sys
 
 # Import functions for DB operations
-from functions import insert_tasks, read_tasks, update_tasks, delete_task, help
+from crud_functions import insert_tasks, read_tasks, update_tasks, delete_task, help
+
 
 # Create connection to the database
 connection = sqlite3.connect("./db/todo.db")
@@ -47,4 +48,4 @@ if len(sys.argv) > 1:
   elif sys.argv[1] == "-h" or sys.argv[1] == "h" or sys.argv[1] == "--help":
     help()
 else:
-  read_tasks()
+  print(read_tasks())

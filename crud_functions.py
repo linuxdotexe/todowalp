@@ -13,7 +13,8 @@ def read_tasks():
   query="SELECT * FROM todo"
   cursor.execute(query)   
   rows=cursor.fetchall()
-  print(rows)
+  return rows
+  # print(rows)
 
 # Function to store insert data into the DB
 def insert_tasks(task_name):
