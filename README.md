@@ -12,3 +12,5 @@ This command line tool takes inputs, creates them into a todolist and makes a wa
 - [x] Make any wrong command return the help message
 - [x] Decide theming for the wallpaper
 - [x] Create a base image
+- [ ] Write create_wallpaper()
+- [ ] Write set_wallpaper()
