@@ -10,7 +10,7 @@ cursor = connection.cursor()
 
 # Function to read all the tasks in the table
 def read_tasks():
-  query="SELECT * FROM todo"
+  query="SELECT * FROM todo ORDER BY status ASC"
   cursor.execute(query)   
   rows=cursor.fetchall()
   return rows
