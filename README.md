@@ -13,5 +13,5 @@ This command line tool takes inputs, creates them into a todolist and makes a wa
 - [x] Decide theming for the wallpaper
 - [x] Create a base image
 - [x] Write create_wallpaper()
-- [ ] Try to make the text left aligned
-- [ ] Write set_wallpaper()
+- [x] Try to make the text left aligned
+- [x] Write set_wallpaper()
