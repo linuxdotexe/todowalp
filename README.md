@@ -15,3 +15,7 @@ This command line tool takes inputs, creates them into a todolist and makes a wa
 - [x] Write create_wallpaper()
 - [x] Try to make the text left aligned
 - [x] Write set_wallpaper()
+- [ ] Make main.py into a script named tw
+- [ ] Write an install script
+- [ ] Write docs
+- [ ] I definitely forgot something. Must add that here when I remember and do it.
