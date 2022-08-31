@@ -31,7 +31,9 @@ def create_wallpaper():
 
 def set_wallpaper():
   # Set wallpaper
+  subprocess.run("feh --bg-scale ./assets/todowalp.png", shell=True)
 
   print("Wallpaper set")
 
 create_wallpaper()
+set_wallpaper()
