@@ -1,6 +1,6 @@
 from crud_functions import read_tasks
 
-import os
+import subprocess
 
 # Function to create a wallpaper
 def create_wallpaper():
@@ -17,8 +17,17 @@ def create_wallpaper():
 
   create_wallpaper_command = "convert ./assets/base_image.png -gravity Center -font ./assets/fonts/JetBrainsMono.ttf -pointsize 30 -fill #cdd6f4 -annotate 0 '{}' ./assets/todowalp.png".format(wallpaper_text)
 
-  print(create_wallpaper_command)
-  # os.system(create_wallpaper_command)
+  subprocess.run([
+    'convert',
+    './assets/base_image.png',
+    '-font', './assets/fonts/JetBrainsMono.ttf',
+    '-pointsize', '30',
+    '-fill', '#cdd6f4',
+    '-gravity', 'Center',
+    '-annotate', '0',
+    wallpaper_text,
+    './assets/todowalp.png',
+  ])
 
 def set_wallpaper():
   # Set wallpaper
