@@ -15,18 +15,18 @@ def create_wallpaper():
     else:
       wallpaper_text += "[X] " + key + "\\n"
 
-  create_wallpaper_command = "convert ./assets/base_image.png -gravity Center -font ./assets/fonts/JetBrainsMono.ttf -pointsize 30 -fill #cdd6f4 -annotate 0 '{}' ./assets/todowalp.png".format(wallpaper_text)
-
   subprocess.run([
     'convert',
     './assets/base_image.png',
-    '-font', './assets/fonts/JetBrainsMono.ttf',
-    '-pointsize', '30',
+    '-background', 'none',
     '-fill', '#cdd6f4',
-    '-gravity', 'Center',
-    '-annotate', '0',
-    wallpaper_text,
-    './assets/todowalp.png',
+    '-font', './assets/fonts/JetBrainsMono.ttf',
+    '-pointsize', '60',
+    '-gravity', 'west',
+    'label:{}'.format(wallpaper_text),
+    '-gravity', 'center',
+    '-compose', 'over',
+    '-composite', './assets/todowalp.png',
   ])
 
 def set_wallpaper():
