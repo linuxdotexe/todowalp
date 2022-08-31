@@ -5,7 +5,7 @@
 import sqlite3
 
 # Create connection to the database
-connection = sqlite3.connect("./db/todo.db")
+connection = sqlite3.connect("../db/todo.db")
 cursor = connection.cursor()
 
 # Function to read all the tasks in the table
