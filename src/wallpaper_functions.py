@@ -13,11 +13,14 @@ def create_wallpaper():
   task_list = dict(task_list)
   # Put todo on image
   wallpaper_text = ""
-  for key, value in task_list.items():
-    if value == 0:
-      wallpaper_text += "[ ] " + key + "\\n"
-    else:
-      wallpaper_text += "[X] " + key + "\\n"
+  if len(task_list) == 0:
+    wallpaper_text = "No tasks listed."
+  else:
+    for key, value in task_list.items():
+      if value == 0:
+        wallpaper_text += "[ ] " + key + "\\n"
+      else:
+        wallpaper_text += "[X] " + key + "\\n"
 
   # explanation p1: https://www.reddit.com/r/learnpython/comments/x1lte4/error_with_ossystem/
   # explanation p2: https://stackoverflow.com/questions/73550468/align-text-to-left-with-imagemagick
