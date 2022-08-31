@@ -5,7 +5,7 @@
 import sqlite3
 
 # Create connection to the database
-connection = sqlite3.connect("../db/todo.db")
+connection = sqlite3.connect("./db/todo.db")
 cursor = connection.cursor()
 
 # Function to read all the tasks in the table
@@ -14,7 +14,6 @@ def read_tasks():
   cursor.execute(query)   
   rows=cursor.fetchall()
   return rows
-  # print(rows)
 
 # Function to store insert data into the DB
 def insert_tasks(task_name):
@@ -27,6 +26,11 @@ def insert_tasks(task_name):
 # Function to delete a task
 def delete_task(task_name):
   cursor.execute("DELETE FROM todo WHERE task_name IS ?", (task_name,))
+  connection.commit()
+
+# Bulk delete all completed tasks
+def delete_all_finished_tasks():
+  cursor.execute("DELETE FROM todo WHERE status is 1")
   connection.commit()
 
 # Function to update task data in the DB
