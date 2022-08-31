@@ -8,7 +8,7 @@ import sqlite3
 import sys
 
 # Import functions for DB operations
-from crud_functions import insert_tasks, read_tasks, update_tasks, delete_task, help
+from src.crud_functions import insert_tasks, read_tasks, update_tasks, delete_task, help
 
 
 # Create connection to the database
