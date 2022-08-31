@@ -1,7 +1,7 @@
 # Author: Venkata Naga Sai Nivas Mangu
 # Contact: sainonbeat99@gmail.com
 
-from crud_functions import read_tasks
+from src.crud_functions import read_tasks
 
 # Import subprocess to run shell commands (imagemagick)
 import subprocess
@@ -23,23 +23,19 @@ def create_wallpaper():
   # explanation p2: https://stackoverflow.com/questions/73550468/align-text-to-left-with-imagemagick
   subprocess.run([
     'convert',
-    '../assets/base_image.png',
+    './assets/base_image.png',
     '-background', 'none',
     '-fill', '#cdd6f4',
-    '-font', '../assets/fonts/JetBrainsMono.ttf',
+    '-font', './assets/fonts/JetBrainsMono.ttf',
     '-pointsize', '60',
     '-gravity', 'west',
     'label:{}'.format(wallpaper_text),
     '-gravity', 'center',
     '-compose', 'over',
-    '-composite', '../assets/todowalp.png',
+    '-composite', './assets/todowalp.png',
   ])
+  set_wallpaper()
 
 def set_wallpaper():
   # Set wallpaper
-  subprocess.run("feh --bg-scale ../assets/todowalp.png", shell=True)
-
-  print("Wallpaper set")
-
-create_wallpaper()
-set_wallpaper()
+  subprocess.run("feh --bg-scale ./assets/todowalp.png", shell=True)
