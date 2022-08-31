@@ -8,8 +8,8 @@ import sqlite3
 import sys
 
 # Import functions for DB operations
-from src.crud_functions import insert_tasks, read_tasks, update_tasks, delete_task, help
-
+from src.crud_functions import delete_all_finished_tasks, insert_tasks, read_tasks, update_tasks, delete_task, help
+from src.wallpaper_functions import create_wallpaper
 
 # Create connection to the database
 connection = sqlite3.connect("./db/todo.db")
@@ -28,6 +28,7 @@ if len(sys.argv) > 1:
   if sys.argv[1] == "-i" or sys.argv[1] == "i" or sys.argv[1] == "--insert":
     try:
       insert_tasks(sys.argv[2])
+      create_wallpaper()
     except IndexError:
       print("Not enough arguments. Enter the name of the task.")
       print("Try the -h flag for the help menu.")
@@ -36,6 +37,7 @@ if len(sys.argv) > 1:
   elif sys.argv[1] == "-d" or sys.argv[1] == "d" or sys.argv[1] == "--delete":
     try:
       delete_task(sys.argv[2])
+      create_wallpaper()
     except IndexError:
       print("Not enough arguments. Enter the name of the task.")
       print("Try the -h flag for the help menu.")
@@ -43,6 +45,12 @@ if len(sys.argv) > 1:
   # Define flag for update_tasks
   elif sys.argv[1] == "-u" or sys.argv[1] == "u" or sys.argv[1] == "--update":
     update_tasks()
+    create_wallpaper()
+
+  # Delete all finished tasks
+  elif sys.argv[1] == "-df" or sys.argv[1] == "df" or sys.argv[1] == "--delete-finished":
+    delete_all_finished_tasks()
+    create_wallpaper()
 
   # Define flag for help
   elif sys.argv[1] == "-h" or sys.argv[1] == "h" or sys.argv[1] == "--help":
