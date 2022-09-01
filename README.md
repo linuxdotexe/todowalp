@@ -18,5 +18,5 @@ This command line tool takes inputs, creates them into a todolist and makes a wa
 - [x] Make main.py into a script named tw
 - [x] Display a message when no tasks are in DB
 - [x] Make it customizable
-- [ ] Write an install script
+- [x] Write an install script
 - [ ] Write docs
