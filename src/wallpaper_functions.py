@@ -2,6 +2,7 @@
 # Contact: sainonbeat99@gmail.com
 
 from src.crud_functions import read_tasks
+from src.vars import variables_dict
 
 # Import subprocess to run shell commands (imagemagick)
 import subprocess
@@ -26,11 +27,11 @@ def create_wallpaper():
   # explanation p2: https://stackoverflow.com/questions/73550468/align-text-to-left-with-imagemagick
   subprocess.run([
     'convert',
-    './assets/base_image.png',
-    '-background', 'none',
-    '-fill', '#cdd6f4',
-    '-font', './assets/fonts/JetBrainsMono.ttf',
-    '-pointsize', '60',
+    variables_dict["base_image"],
+    '-background', variables_dict["background"],
+    '-fill', variables_dict["fill"], # var
+    '-font', variables_dict["font"], # var
+    '-pointsize', variables_dict["pointsize"], # var
     '-gravity', 'west',
     'label:{}'.format(wallpaper_text),
     '-gravity', 'center',
