@@ -9,12 +9,17 @@ import sqlite3
 # Import sys for taking command line arguments
 import sys
 
+# SOLVING THE PATH PROBLEM
+from config.definitions import ROOT_DIR
+import os
+
 # Import functions for DB operations
 from src.crud_functions import delete_all_finished_tasks, insert_tasks, read_tasks, update_tasks, delete_task, help
 from src.wallpaper_functions import create_wallpaper
 
 # Create connection to the database
-connection = sqlite3.connect("./db/todo.db")
+DB_PATH = os.path.join(ROOT_DIR, "db", "todo.db")
+connection = sqlite3.connect(DB_PATH)
 cursor = connection.cursor()
 
 # Create a table in the database

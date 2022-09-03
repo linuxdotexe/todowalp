@@ -1,11 +1,16 @@
 # Author: Venkata Naga Sai Nivas Mangu
 # Contact: sainonbeat99@gmail.com
 
+# SOLVING THE PATH PROBLEM
+from config.definitions import ROOT_DIR
+import os
+
 # Import SQLite
 import sqlite3
 
 # Create connection to the database
-connection = sqlite3.connect("./db/todo.db")
+DB_PATH = os.path.join(ROOT_DIR, "db", "todo.db")
+connection = sqlite3.connect(DB_PATH)
 cursor = connection.cursor()
 
 # Function to read all the tasks in the table

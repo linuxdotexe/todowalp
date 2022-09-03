@@ -1,6 +1,13 @@
 # Author: Venkata Naga Sai Nivas Mangu
 # Contact: sainonbeat99@gmail.com
 
+# SOLVING THE PATH PROBLEM
+from config.definitions import ROOT_DIR
+import os
+
+TODOWALP_PATH = os.path.join(ROOT_DIR, "assets", "todowalp.png")
+
+# Importing functions and vars
 from src.crud_functions import read_tasks
 from src.vars import variables_dict
 
@@ -15,7 +22,7 @@ def create_wallpaper():
   # Put todo on image
   wallpaper_text = ""
   if len(task_list) == 0:
-    wallpaper_text = "No tasks listed."
+    wallpaper_text = variables_dict["empty_text"]
   else:
     for key, value in task_list.items():
       if value == 0:
@@ -36,10 +43,10 @@ def create_wallpaper():
     'label:{}'.format(wallpaper_text),
     '-gravity', 'center',
     '-compose', 'over',
-    '-composite', './assets/todowalp.png',
+    '-composite', TODOWALP_PATH,
   ])
   set_wallpaper()
 
 def set_wallpaper():
   # Set wallpaper
-  subprocess.run("feh --bg-scale ./assets/todowalp.png", shell=True)
+  subprocess.run("feh --bg-scale {}".format(TODOWALP_PATH), shell=True)
