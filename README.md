@@ -4,7 +4,9 @@ This command line tool takes inputs, creates them into a todolist and makes a wa
 
 ## One command install
 
+```shell
 bash <(curl -s https://raw.githubusercontent.com/linuxdotexe/todowalp/master/install.sh)
+```
 
 ## TODO
 
