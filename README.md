@@ -2,6 +2,10 @@
 
 This command line tool takes inputs, creates them into a todolist and makes a wallpaper out of that.
 
+## One command install
+
+bash <(curl -s https://raw.githubusercontent.com/linuxdotexe/todowalp/master/install.sh)
+
 ## TODO
 
 - [x] Figure out a language
