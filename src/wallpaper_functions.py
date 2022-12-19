@@ -26,9 +26,9 @@ def create_wallpaper():
   else:
     for key, value in task_list.items():
       if value == 0:
-        wallpaper_text += "[ ] " + key + "\\n"
+        wallpaper_text += ". " + key + "\\n"
       else:
-        wallpaper_text += "[X] " + key + "\\n"
+        wallpaper_text += "x " + key + "\\n"
 
   # explanation p1: https://www.reddit.com/r/learnpython/comments/x1lte4/error_with_ossystem/
   # explanation p2: https://stackoverflow.com/questions/73550468/align-text-to-left-with-imagemagick

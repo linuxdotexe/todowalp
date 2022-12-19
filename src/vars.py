@@ -15,6 +15,6 @@ variables_dict = {
   "background": "none",
   "fill": "#cdd6f4",
   "font": FONT_PATH,
-  "pointsize": "35",
-  "empty_text": "Custom empty wallpaper text."
+  "pointsize": "30",
+  "empty_text": "Z  E  R  0"
 }
