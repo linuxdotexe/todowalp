@@ -49,6 +49,11 @@ def create_wallpaper():
 
 def set_wallpaper():
   # Set wallpaper
-  # subprocess.run("feh --bg-scale {}".format(TODOWALP_PATH), shell=True)
+  current_de = os.environ["DESKTOP_SESSION"]
+
+  if (current_de == "gnome"):
+    subprocess.run("gsettings set org.gnome.desktop.background picture-uri-dark {}".format(TODOWALP_PATH), shell=True)
+  else:
+    subprocess.run("feh --bg-scale {}".format(TODOWALP_PATH), shell=True)
+
   # TODO: Look into XDG_CURRENT_DESKTOP
-  subprocess.run("gsettings set org.gnome.desktop.background picture-uri-dark {}".format(TODOWALP_PATH), shell=True)
